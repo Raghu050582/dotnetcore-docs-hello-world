@@ -1,39 +1,53 @@
-# .NET 7 Hello World
+![RealWorld Example Applications](media/realworld-dual-mode.png)
 
-This sample demonstrates a tiny Hello World .NET Core app for [App Service Web App](https://docs.microsoft.com/azure/app-service-web). This sample can be used in a .NET Azure App Service app as well as in a Custom Container Azure App Service app.
+<p align="center" style="margin-top: 30px;">
+<img src="media/stacks_hr.gif"  />
+</p>
 
-## Log in to Azure Container Registry
+<a href="https://demo.realworld.io/"><img src="media/conduit_l.png" align="right" width="250px" /></a>
 
-Using the Azure CLI, log in to the Azure Container Registry (ACR):
+### See how _the exact same_ Medium.com clone (called [Conduit](https://demo.realworld.io)) is built using different [frontends](https://codebase.show/projects/realworld?category=frontend) and [backends](https://codebase.show/projects/realworld?category=backend). Yes, you can mix and match them, because **they all adhere to the same [API spec](https://realworld-docs.netlify.app/docs/specs/backend-specs/introduction)** 😮😎
 
-```azurecli
-az acr login -n <your_registry_name>
-```
+While most "todo" demos provide an excellent cursory glance at a framework's capabilities, they typically don't convey the knowledge & perspective required to actually build _real_ applications with it.
 
-## Running in a Docker Container
+**RealWorld** solves this by allowing you to choose any frontend (React, Angular, & more) and any backend (Node, Django, & more) and see how they power a real-world, beautifully designed full-stack app called [**Conduit**](https://demo.realworld.io).
 
-This repository contains 2 Dockerfiles, a Linux container and a Windows container.
+_Read the [full blog post announcing RealWorld on Medium.](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5)_
 
-### Publish the Windows image to your Registry
+Join us on [GitHub Discussions!](https://github.com/gothinkster/realworld/discussions) 🎉
 
-To build the Windows image locally and publish to ACR, run the following command:
+# Implementations
 
-```docker
-docker build -f Dockerfile.windows -t dotnetcore-docs-hello-world-windows . 
-docker tag dotnetcore-docs-hello-world-windows <your_registry_name>.azurecr.io/dotnetcore-docs-hello-world-windows:latest
-docker push <your_registry_name>.azurecr.io/dotnetcore-docs-hello-world-windows:latest
-```
+Over 100 implementations have been created using various languages, libraries, and frameworks.
 
-### Publish the Linux image to your Registry
+Explore them on [**CodebaseShow**](https://codebase.show/projects/realworld).
 
-To build the Windows image locally and publish to ACR, run the following command:
+# Create a new implementation
 
-```docker
-docker build -f Dockerfile.linux -t dotnetcore-docs-hello-world-linux . 
-docker tag dotnetcore-docs-hello-world-windows <your_registry_name>.azurecr.io/dotnetcore-docs-hello-world-linux:latest
-docker push <your_registry_name>.azurecr.io/dotnetcore-docs-hello-world-linux:latest
-```
+[**Create a new implementation >>>**](https://realworld-docs.netlify.app/docs/implementation-creation/introduction)
 
-# Contributing
+Or you can [view upcoming implementations (WIPs)](https://github.com/gothinkster/realworld/discussions/categories/wip-implementations).
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+# Learn more
+
+- ["Introducing RealWorld 🙌"](https://medium.com/@ericsimons/introducing-realworld-6016654d36b5) by Eric Simons
+- Every tutorial is built against the same [API spec](api/) to ensure modularity of every frontend & backend
+- Every frontend utilizes the same handcrafted [Bootstrap 4 theme](https://github.com/gothinkster/conduit-bootstrap-template) for identical UI/UX
+- There is a hosted version of the backend API available for public usage, no API keys are required
+- Interested in creating a new RealWorld stack? View our [starter guide & spec](https://realworld-docs.netlify.app/docs/implementation-creation/introduction)
+
+# Active Maintainers
+
+#### [Gérôme Grignon](https://github.com/geromegrignon) - Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/32737308?v=4">
+
+Gérôme is a Software Engineer at Sfeir. He's an open-source enthusiast.<br /><br />
+
+#### [Manuel Vila](https://github.com/mvila) - Maintainer
+
+<img align="left" width="40" height="40" src="https://avatars.githubusercontent.com/u/381671?v=40">
+
+Manuel is an independent Software Engineer, creator of the [Layr framework](https://layrjs.com) and the [CodebaseShow website](https://codebase.show/).<br /><br />
+
+[![Brought to you by Thinkster](media/end.png)](https://thinkster.io)
